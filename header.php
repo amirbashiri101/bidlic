@@ -1,10 +1,8 @@
 <?php
 include_once 'core/config.php';
-if(isset($_COOKIE['login'])){
-	$db->redirect('loginform.php','dinger','نام کاربری یا رمز ورود اشتباه است');
-
+if(count($_COOKIE['login']) == 0){
+	$db->redirect('login.php','dinger','نام کاربری یا رمز ورود اشتباه است');
 }
-echo $_COOKIE['login']
 ?>
 
 
