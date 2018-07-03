@@ -1,11 +1,3 @@
-<?php
-include_once 'core/config.php';
-if(count($_COOKIE['login']) == 0){
-	$db->redirect('login.php','dinger','نام کاربری یا رمز ورود اشتباه است');
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="fa">
 

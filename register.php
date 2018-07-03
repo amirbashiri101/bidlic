@@ -9,119 +9,90 @@
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <title>قالب مدیریتی Elite</title>
-    <!-- Bootstrap Core CSS -->
     <link href="themes/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="themes/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
-    <!-- animation CSS -->
     <link href="themes/assets/plugins/animate/animate.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <link href="themes/assets/plugins/register-steps/steps.css" rel="stylesheet">
     <link href="themes/assets/css/style.css" rel="stylesheet">
-    <!-- color CSS -->
     <link href="themes/assets/css/colors/default.css" id="theme" rel="stylesheet">
-    <!-- Icons -->
     <link href="themes/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="themes/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
     <link href="themes/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
     <link href="themes/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
     <link href="themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
     <link href="themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <style>
+        #eliteregister li{
+            color: #fff;
+        }
+        #eliteregister li::before {
+            color: #686868;
+            background-color: #fff;
+        }
+    </style>
 </head>
 
 <body>
-<!-- Preloader -->
-<div class="preloader">
-    <svg class="circular" viewbox="25 25 50 50">
-        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
-    </svg>
-</div>
-<section id="wrapper" class="login-register">
-    <div class="login-box">
-        <div class="white-box">
-            <form class="form-horizontal form-material" id="loginform" action="index.html">
-                <h3 class="box-title m-b-20">ثبت نام</h3>
-                <div class="form-group ">
-                    <div class="col-12">
-                        <input class="form-control" type="text" required="" placeholder="نام و نام خانوادگی">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="col-12">
-                        <input class="form-control" type="text" required="" placeholder="نام کاربری">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="col-12">
-                        <input class="form-control" type="text" required="" placeholder="نام نمایشی در مزایده">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="col-12">
-                        <input class="form-control" type="text" required="" placeholder="تلفن">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="col-12">
-                        <input class="form-control" type="text" required="" placeholder="موبایل">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="col-12">
-                        <input class="form-control" type="text" required="" placeholder="ایمیل">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="col-12">
-                        <input class="form-control" type="text" required="" placeholder="آدرس">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="col-12">
-                        <input class="form-control" type="password" required="" placeholder="رمز عبور">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-12">
-                        <input class="form-control" type="password" required="" placeholder="تایید رمز عبور">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-12">
-                        <div class="checkbox checkbox-primary p-t-0">
-                            <input id="checkbox-signup" type="checkbox">
-                            <label for="checkbox-signup"> با تمامی <a href="#">قوانین</a> موافقم</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group text-center m-t-20">
-                    <div class="col-12">
-                        <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">عضو شوید</button>
-                    </div>
-                </div>
-                <div class="form-group m-b-0">
-                    <div class="col-sm-12 text-center">
-                        <p>حساب کاربری دارید؟ <a href="login1.php" class="m-r-5"><b>وارد شوید</b></a></p>
-                    </div>
-                </div>
-            </form>
-        </div>
+    <div class="preloader">
+        <svg class="circular" viewbox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+        </svg>
     </div>
-</section>
-<!-- jQuery -->
-<script src="themes/assets/plugins/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="themes/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
-<script src="themes/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="themes/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
-<!-- Menu Plugin JavaScript -->
-<script src="themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
-<!--slimscroll JavaScript -->
-<script src="themes/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
-<!--Wave Effects -->
-<script src="themes/assets/plugins/waves/waves.min.js"></script>
-<!-- Custom Theme JavaScript -->
-<script src="themes/assets/js/custom.js"></script>
-<!--Style Switcher -->
-<script src="themes/assets/js/style-switcher.js"></script>
-</body>
+    <section id="wrapper" class="step-register">
+        <?php
+        if(@$_COOKIE['notif'] != ''){
+            $db->notif(json_decode(@$_COOKIE['notif'],true)['type'], json_decode(@$_COOKIE['notif'],true)['text']);
+            $_COOKIE['notif'] = '';
+        }
+        ?>
+        <div class="register-box">
+            <div class="">
+                <form id="msform" actions="<?= HTTP_HOST ?>/actions/register.php">
+                    <ul id="eliteregister">
+                        <li class="active">نام ها</li>
+                        <li>راه های ارتباطی</li>
+                        <li>آدرس</li>
+                    </ul>
+                    <fieldset>
+                        <h2 class="fs-title">نام های خود را در بخش های مختلف وارد کنید</h2>
+                        <h3 class="fs-subtitle">قدم اول</h3>
+                        <input type="text" name="full_name" placeholder="نام و نام خانوادگی">
+                        <input type="text" name="user_name" placeholder="نام کاربری">
+                        <input type="text" name="auction_name" placeholder="نام نمایشی در مزایده">
+                        <input type="button" name="next" class="next action-button" value="بعدی">
+                    </fieldset>
+                    <fieldset>
+                        <h2 class="fs-title"> راه های ارتباطی خود را وارد کنید</h2>
+                        <h3 class="fs-subtitle">قدم دوم</h3>
+                        <input type="text" name="mobile" placeholder="موبایل">
+                        <input type="text" name="phone" placeholder="تلفن">
+                        <input type="text" name="email" placeholder="ایمیل">
+                        <input type="button" name="previous" class="previous action-button" value="قبلی">
+                        <input type="button" name="next" class="next action-button" value="بعدی">
+                    </fieldset>
+                    <fieldset>
+                        <h2 class="fs-title">آدرس محل سکونت</h2>
+                        <h3 class="fs-subtitle">قدم آخر</h3>
+                        <textarea name="address" placeholder="آدرس"></textarea>
+                        <input type="button" name="previous" class="previous action-button" value="قبلی">
+                        <input type="submit" name="create_user" class="submit action-button" value="ثبت">
+                    </fieldset>
+                </form>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </section>
+    <script src="themes/assets/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="themes/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
+    <script src="themes/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="themes/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+    <script src="themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <script src="themes/assets/plugins/register-steps/jquery.easing.min.js"></script>
+    <script src="themes/assets/js/register-init.js"></script>
+    <script src="themes/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="themes/assets/plugins/waves/waves.min.js"></script>
+    <script src="themes/assets/js/custom.js"></script>
+    <script src="themes/assets/js/style-switcher.js"></script>
+    </body>
 
 </html>

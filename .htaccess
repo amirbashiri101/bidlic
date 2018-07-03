@@ -1,0 +1,8 @@
+Options +FollowSymlinks
+RewriteEngine on
+Options -indexes
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^/?([a-z_]+)/([a-z_]+)$ index.php?linkOne=$1&linkTow=$2 [L]

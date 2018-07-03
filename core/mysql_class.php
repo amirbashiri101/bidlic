@@ -1797,13 +1797,13 @@ class MysqliDb
     }
     public function notif($type,$text){
         if($type == 'success'){
-            echo '<div class="alert alert-success alert-dismissible"><button type="button" class="close pull-left" data-dismiss="alert" aria-hidden="true">×</button><h4><i class="icon fa fa-check"></i> توجه</h4>'.$text.'</div>';
+            echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>'.$text.'</div>';
         }
         if($type == 'warning'){
-            echo '<div class="alert alert-warning alert-dismissible"><button type="button" class="close pull-left" data-dismiss="alert" aria-hidden="true">×</button><h4><i class="icon fa fa-warning"></i> توجه</h4>'.$text.'</div>';
+            echo '<div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>'.$text.'</div>';
         }
         if($type == 'danger'){
-            echo '<div class="alert alert-danger alert-dismissible"><button type="button" class="close pull-left" data-dismiss="alert" aria-hidden="true">×</button><h4><i class="icon fa fa-ban"></i>توجه</h4>'.$text.'</div>';
+            echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>'.$text.'</div>';
         }
     }
     public function GenerateThumbnail($im_filename,$th_filename,$max_width,$max_height,$quality = 0.75)

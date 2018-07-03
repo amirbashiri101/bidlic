@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="fa">
 
@@ -9,18 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>قالب مدیریتی Elite</title>
-    <!-- Bootstrap Core CSS -->
+    <link rel="icon" type="image/png" sizes="16x16" href="themes/assets/images/favicon.png">
+    <title>بیدلیک :: ورود به حساب کاربری</title>
     <link href="themes/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="themes/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
-    <!-- animation CSS -->
     <link href="themes/assets/plugins/animate/animate.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link href="themes/assets/css/style.css" rel="stylesheet">
-    <!-- color CSS -->
     <link href="themes/assets/css/colors/default.css" id="theme" rel="stylesheet">
-    <!-- Icons -->
     <link href="themes/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="themes/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
     <link href="themes/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
@@ -30,7 +23,6 @@
 </head>
 
 <body>
-<!-- Preloader -->
 <div class="preloader">
     <svg class="circular" viewbox="25 25 50 50">
         <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
