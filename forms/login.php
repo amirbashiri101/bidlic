@@ -7,19 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="themes/assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../themes/assets/images/favicon.png">
     <title>بیدلیک :: ورود به حساب کاربری</title>
-    <link href="themes/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="themes/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
-    <link href="themes/assets/plugins/animate/animate.css" rel="stylesheet">
-    <link href="themes/assets/css/style.css" rel="stylesheet">
-    <link href="themes/assets/css/colors/default.css" id="theme" rel="stylesheet">
-    <link href="themes/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="themes/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
-    <link href="themes/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
-    <link href="themes/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
-    <link href="themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
-    <link href="themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="../themes/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../themes/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <link href="../themes/assets/plugins/animate/animate.css" rel="stylesheet">
+    <link href="../themes/assets/css/style.css" rel="stylesheet">
+    <link href="../themes/assets/css/colors/default.css" id="theme" rel="stylesheet">
+    <link href="../themes/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../themes/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
+    <link href="../themes/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
+    <link href="../themes/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
+    <link href="../themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="../themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
 <section id="wrapper" class="login-register">
     <div class="login-box">
         <div class="white-box">
-            <form class="form-horizontal form-material" id="loginform" action="actions/login.php" method="post">
+            <form class="form-horizontal form-material" id="loginform" action="../actions/login.php" method="post">
                 <h3 class="box-title m-b-20">ورود</h3>
                 <div class="form-group ">
                     <div class="col-12">
@@ -92,21 +92,21 @@
     </div>
 </section>
 <!-- jQuery -->
-<script src="themes/assets/plugins/jquery/dist/jquery.min.js"></script>
+<script src="../themes/assets/plugins/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="themes/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
-<script src="themes/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="themes/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+<script src="../themes/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
+<script src="../themes/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../themes/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
 <!-- Menu Plugin JavaScript -->
-<script src="themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
+<script src="../themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
 <!--slimscroll JavaScript -->
-<script src="themes/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../themes/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
 <!--Wave Effects -->
-<script src="themes/assets/plugins/waves/waves.min.js"></script>
+<script src="../themes/assets/plugins/waves/waves.min.js"></script>
 <!-- Custom Theme JavaScript -->
-<script src="themes/assets/js/custom.js"></script>
+<script src="../themes/assets/js/custom.js"></script>
 <!--Style Switcher -->
-<script src="themes/assets/js/style-switcher.js"></script>
+<script src="../themes/assets/js/style-switcher.js"></script>
 </body>
 
 </html>

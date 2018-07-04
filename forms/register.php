@@ -8,19 +8,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>قالب مدیریتی Elite</title>
-    <link href="themes/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="themes/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
-    <link href="themes/assets/plugins/animate/animate.css" rel="stylesheet">
-    <link href="themes/assets/plugins/register-steps/steps.css" rel="stylesheet">
-    <link href="themes/assets/css/style.css" rel="stylesheet">
-    <link href="themes/assets/css/colors/default.css" id="theme" rel="stylesheet">
-    <link href="themes/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="themes/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
-    <link href="themes/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
-    <link href="themes/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
-    <link href="themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
-    <link href="themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <title>بیدلیک :: عضویت در سایت</title>
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/animate/animate.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/register-steps/steps.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/css/style.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/css/colors/default.css" id="theme" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
     <style>
         #eliteregister li{
             color: #fff;
@@ -82,17 +82,18 @@
             </div>
         </div>
     </section>
-    <script src="themes/assets/plugins/jquery/dist/jquery.min.js"></script>
-    <script src="themes/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
-    <script src="themes/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="themes/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
-    <script src="themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
-    <script src="themes/assets/plugins/register-steps/jquery.easing.min.js"></script>
-    <script src="themes/assets/js/register-init.js"></script>
-    <script src="themes/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="themes/assets/plugins/waves/waves.min.js"></script>
-    <script src="themes/assets/js/custom.js"></script>
-    <script src="themes/assets/js/style-switcher.js"></script>
-    </body>
+</body>
+    <script src="<?= HTTP_HOST ?>/themes/assets/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
+    <script src="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+    <script src="<?= HTTP_HOST ?>/themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <script src="<?= HTTP_HOST ?>/themes/assets/plugins/register-steps/jquery.easing.min.js"></script>
+    <script src="<?= HTTP_HOST ?>/themes/assets/js/register-init.js"></script>
+    <script src="<?= HTTP_HOST ?>/themes/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="<?= HTTP_HOST ?>/themes/assets/plugins/waves/waves.min.js"></script>
+    <script src="<?= HTTP_HOST ?>/themes/assets/js/custom.js"></script>
+    <script src="<?= HTTP_HOST ?>/themes/assets/js/style-switcher.js"></script>
+
 
 </html>
