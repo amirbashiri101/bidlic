@@ -13,6 +13,6 @@
         )
     );
     define('HTTP_HOST', 'http://localhost:85/bidlic');
-    define('HTTP_HOST2', 'http://localhost:85/bidlic?index.php=linkOne=');
+    define('HTTP_HOST2', 'http://localhost:85/bidlic/index.php?linkOne=');
     
 

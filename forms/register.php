@@ -30,6 +30,11 @@
             background-color: #fff;
         }
     </style>
+    <script>
+        function submit_form() {
+            $('#msform').submit();
+        }
+    </script>
 </head>
 
 <body>
@@ -39,15 +44,17 @@
         </svg>
     </div>
     <section id="wrapper" class="step-register">
-        <?php
-        if(@$_COOKIE['notif'] != ''){
-            $db->notif(json_decode(@$_COOKIE['notif'],true)['type'], json_decode(@$_COOKIE['notif'],true)['text']);
-            $_COOKIE['notif'] = '';
-        }
-        ?>
+
         <div class="register-box">
             <div class="">
-                <form id="msform" actions="<?= HTTP_HOST ?>/actions/register.php">
+                <?php
+                if(@$_COOKIE['notif'] != ''){
+                    $db->notif(json_decode(@$_COOKIE['notif'],true)['type'], json_decode(@$_COOKIE['notif'],true)['text']);
+                    $_COOKIE['notif'] = '';
+                }
+                ?>
+                <form id="msform" action="<?= HTTP_HOST ?>/actions/register.php" method="post">
+                    <input type="hidden" name="create_user" value="true">
                     <ul id="eliteregister">
                         <li class="active">نام ها</li>
                         <li>راه های ارتباطی</li>
@@ -73,9 +80,10 @@
                     <fieldset>
                         <h2 class="fs-title">آدرس محل سکونت</h2>
                         <h3 class="fs-subtitle">قدم آخر</h3>
+                        <input type="password" name="password" placeholder="رمز ورود">
                         <textarea name="address" placeholder="آدرس"></textarea>
                         <input type="button" name="previous" class="previous action-button" value="قبلی">
-                        <input type="submit" name="create_user" class="submit action-button" value="ثبت">
+                        <input type="submit" onclick="submit_form()" class="submit action-button" value="ثبت">
                     </fieldset>
                 </form>
                 <div class="clear"></div>

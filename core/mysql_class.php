@@ -1875,6 +1875,20 @@ class MysqliDb
         if ($page_count > 1)
             echo '<div class="row"><div class="col-sm-12"><div class="dataTables_paginate paging_simple_numbers" style="text-align: center;"><ul class="pagination">'.$previous_page.$first_page.implode('', $pages).$last_page.$next_page.'</ul></div></div></div>';
     }
+    public function create_random_code($id){
+        $str = "1234567890abcdefghijknmopqrstuvwxyzABCDEFGHIJKNMOPQRSTUVWXYZ";
+        $max = strlen($str)-1;
+        $random_str="";
+        for ($i=0; $i<32; $i++) {
+            $number = mt_rand(0, $max);
+            if ($i==8 || $i==12 || $i==16 || $i==20){
+                $random_str .='-';
+            }
+            $random_str .= substr($str, $number, 1);
+        }
+
+        return $random_str.'_'.$id;
+    }
 }
 
 // END class

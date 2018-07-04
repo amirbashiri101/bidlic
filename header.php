@@ -9,29 +9,21 @@
 	<meta name="author" content="">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
 	<title>قالب مدیریتی Elite</title>
-	<!-- Bootstrap Core CSS -->
-	<link href="themes/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="themes/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
-	<!-- Menu CSS -->
-	<link href="themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
-	<!-- morris CSS -->
-	<link href="themes/assets/plugins/morrisjs/morris.css" rel="stylesheet">
-	<!-- animation CSS -->
-	<link href="themes/assets/plugins/animate/animate.css" rel="stylesheet">
-	<!-- Custom CSS -->
-	<link href="themes/assets/css/style.css" rel="stylesheet">
-	<!-- color CSS -->
-	<link href="themes/assets/css/colors/default.css" id="theme" rel="stylesheet">
-	<!-- Icons -->
-	<link href="themes/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="themes/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
-	<link href="themes/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
-	<link href="themes/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
-	<link href="themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
-	<link href="themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/plugins/morrisjs/morris.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/plugins/animate/animate.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/css/style.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/css/colors/default.css" id="theme" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
+	<link href="<?= HTTP_HOST ?>/themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 </head>
 <body class="fix-header fix-sidebar">
-	<!-- Preloader -->
 	<div class="preloader">
 		<svg class="circular" viewbox="25 25 50 50">
 			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
@@ -40,7 +32,7 @@
 	<div id="wrapper">
 		<nav class="navbar navbar-default navbar-static-top m-b-0">
 			<div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
-				<div class="top-left-part"><a class="logo" href="index.html"><b><img src="assets/images/eliteadmin-logo.png" alt="home"></b><span class="hidden-xs"><img src="assets/images/eliteadmin-text.png" alt="home"></span></a></div>
+				<div class="top-left-part"><a class="logo" href="index.html"><b><img src="<?= HTTP_HOST ?>/themes/assets/images/eliteadmin-logo.png" alt="home"></b><span class="hidden-xs"><img src="assets/images/eliteadmin-text.png" alt="home"></span></a></div>
 				<ul class="nav navbar-top-links navbar-left hidden-xs">
 					<li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-right-circle ti-menu"></i></a></li>
 					<li>
