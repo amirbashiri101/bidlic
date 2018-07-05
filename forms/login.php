@@ -7,19 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../themes/assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= HTTP_HOST ?>/themes/assets/images/favicon.png">
     <title>بیدلیک :: ورود به حساب کاربری</title>
-    <link href="../themes/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../themes/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
-    <link href="../themes/assets/plugins/animate/animate.css" rel="stylesheet">
-    <link href="../themes/assets/css/style.css" rel="stylesheet">
-    <link href="../themes/assets/css/colors/default.css" id="theme" rel="stylesheet">
-    <link href="../themes/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../themes/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
-    <link href="../themes/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
-    <link href="../themes/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
-    <link href="../themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
-    <link href="../themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/animate/animate.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/css/style.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/css/colors/default.css" id="theme" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,43 +30,48 @@
 </div>
 <section id="wrapper" class="login-register">
     <div class="login-box">
+        <?php
+        if(@$_COOKIE['notif'] != ''){
+            $db->notif(json_decode(@$_COOKIE['notif'],true)['type'], json_decode(@$_COOKIE['notif'],true)['text']);
+            $_COOKIE['notif'] = '';
+        }
+        ?>
         <div class="white-box">
-            <form class="form-horizontal form-material" id="loginform" action="../actions/login.php" method="post">
+            <form class="form-horizontal form-material" id="loginform" action="<?= HTTP_HOST ?>/actions/login.php" method="post">
                 <h3 class="box-title m-b-20">ورود</h3>
                 <div class="form-group ">
                     <div class="col-12">
-                        <input class="form-control" type="text" required="" placeholder="نام کاربری" name="user_name">
+                        <input class="form-control" type="text" required="" placeholder="ایمیل یا نام کاربری" name="user_name">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-12">
-                        <input class="form-control" type="password" required="" placeholder="رمز عبور" name="pass">
+                        <input class="form-control" type="password" required="" placeholder="رمز عبور" name="password">
                     </div>
                 </div>
-                <!--<div class="form-group">
+                <div class="form-group">
                     <div class="col-md-12">
                         <div class="checkbox checkbox-primary pull-right p-t-0">
                             <input id="checkbox-signup" type="checkbox">
                             <label for="checkbox-signup"> به خاطر سپاری </label>
                         </div>
                         <a href="javascript:void(0)" id="to-recover" class="text-dark pull-left"><i class="fa fa-lock m-l-5"></i> بازیابی رمز عبور</a> </div>
-                </div>-->
+                </div>
                 <div class="form-group text-center m-t-20">
                     <div class="col-12">
-                        <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit" name="sub">ورود</button>
+                        <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit" name="login" value="true">ورود</button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 m-t-10 text-center">
                         <div class="social">
-                            <a href="javascript:void(0)" class="btn  btn-facebook" data-toggle="tooltip" title="Login with Facebook"> <i aria-hidden="true" class="fa fa-facebook"></i> </a>
-                            <a href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="Login with Google"> <i aria-hidden="true" class="fa fa-google-plus"></i> </a>
+                            <a href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="ورود با گوگل"> <i aria-hidden="true" class="fa fa-google-plus"></i> </a>
                         </div>
                     </div>
                 </div>
                 <div class="form-group m-b-0">
                     <div class="col-sm-12 text-center">
-                        <p>حسابی ندارید؟ <a href="register.html" class="m-r-5"><b>عضو شوید</b></a></p>
+                        <p>حسابی ندارید؟ <a href="<?= HTTP_HOST2 ?>register" class="m-r-5"><b>عضو شوید</b></a></p>
                     </div>
                 </div>
             </form>
@@ -91,22 +96,15 @@
         </div>
     </div>
 </section>
-<!-- jQuery -->
-<script src="../themes/assets/plugins/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="../themes/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
-<script src="../themes/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../themes/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
-<!-- Menu Plugin JavaScript -->
-<script src="../themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
-<!--slimscroll JavaScript -->
-<script src="../themes/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
-<!--Wave Effects -->
-<script src="../themes/assets/plugins/waves/waves.min.js"></script>
-<!-- Custom Theme JavaScript -->
-<script src="../themes/assets/js/custom.js"></script>
-<!--Style Switcher -->
-<script src="../themes/assets/js/style-switcher.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/jquery/dist/jquery.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/waves/waves.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/js/custom.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/js/style-switcher.js"></script>
 </body>
 
 </html>

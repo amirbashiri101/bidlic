@@ -16,8 +16,16 @@ if($linkOne == 'register' || $linkOne == 'login' || $_COOKIE['user_id'] == ''){
         default:
             require('home.php');
     }
-}else{
+}elseif($_COOKIE['user_id'] != ''){
     $user = $db->where('id', $_COOKIE['user_id'])->getOne('users');
     require('header.php');
     require('sidebar.php');
+    echo $_COOKIE['user_id'];
+    switch ($linkOne) {
+
+        default:
+            require('home.php');
+    }
+    require('footer.php');
+
 }
