@@ -7,40 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= HTTP_HOST ?>/themes/assets/images/favicon.png">
     <title>قالب مدیریتی Elite</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
     <!-- animation CSS -->
-    <link href="assets/plugins/animate/animate.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/animate/animate.css" rel="stylesheet">
     <!-- Menu CSS -->
-    <link href="assets/plugins/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- Dropzone css -->
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css">
     <!-- Custom CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/css/style.css" rel="stylesheet">
     <!-- color CSS -->
-    <link href="assets/css/colors/default.css" id="theme" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/css/colors/default.css" id="theme" rel="stylesheet">
     <!-- Icons -->
-    <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
-    <link href="assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
-    <link href="assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
-    <link href="assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
-    <link href="assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="<?= HTTP_HOST ?>/themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 </head>
-
 <body class="fix-header fix-sidebar">
-<!-- Preloader -->
 <div class="preloader">
     <svg class="circular" viewbox="25 25 50 50">
         <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
     </svg>
 </div>
 <div id="wrapper">
-    <!-- Top Navigation -->
     <nav class="navbar navbar-default navbar-static-top m-b-0">
         <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
-            <div class="top-left-part"><a class="logo" href="index.html"><b><img src="assets/images/eliteadmin-logo.png" alt="home"></b><span class="hidden-xs"><img src="assets/images/eliteadmin-text.png" alt="home"></span></a></div>
+            <div class="top-left-part"><a class="logo" href="index.html"><b><img src="<?= HTTP_HOST ?>/themes/assets/images/eliteadmin-logo.png" alt="home"></b><span class="hidden-xs"><img src="assets/images/eliteadmin-text.png" alt="home"></span></a></div>
             <ul class="nav navbar-top-links navbar-left hidden-xs">
                 <li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-right-circle ti-menu"></i></a></li>
                 <li>
@@ -61,28 +60,28 @@
                         <li>
                             <div class="message-center">
                                 <a href="#">
-                                    <div class="user-img"> <img src="assets/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-left"></span> </div>
+                                    <div class="user-img"> <img src="themes/assets/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-left"></span> </div>
                                     <div class="mail-content">
                                         <h5>بابک جهانبخش</h5>
-                                        <span class="mail-desc">ادمین پنل شما بسیار زیباست!</span> <span class="time">9:30 AM</span> </div>
+                                        <span class="mail-desc">ادمین پنل شما بسیار زیباست!</span> <span class="time">لورم ایپسوم</span> </div>
                                 </a>
                                 <a href="#">
-                                    <div class="user-img"> <img src="assets/images/users/sonu.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-left"></span> </div>
+                                    <div class="user-img"> <img src="themes/assets/images/users/sonu.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-left"></span> </div>
                                     <div class="mail-content">
                                         <h5>محمد علیزاده</h5>
-                                        <span class="mail-desc">آهنگ جدید مرا دریافت کنید!</span> <span class="time">9:10 AM</span> </div>
+                                        <span class="mail-desc">آهنگ جدید مرا دریافت کنید!</span> <span class="time">لورم ایپسوم</span> </div>
                                 </a>
                                 <a href="#">
-                                    <div class="user-img"> <img src="assets/images/users/arijit.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-left"></span> </div>
+                                    <div class="user-img"> <img src="themes/assets/images/users/arijit.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-left"></span> </div>
                                     <div class="mail-content">
                                         <h5>سپهر آریا</h5>
-                                        <span class="mail-desc">من یک خواننده هستم!</span> <span class="time">9:08 AM</span> </div>
+                                        <span class="mail-desc">من یک خواننده هستم!</span> <span class="time">لورم ایپسوم</span> </div>
                                 </a>
                                 <a href="#">
-                                    <div class="user-img"> <img src="assets/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-left"></span> </div>
+                                    <div class="user-img"> <img src="themes/assets/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-left"></span> </div>
                                     <div class="mail-content">
                                         <h5>بابک جهانبخش</h5>
-                                        <span class="mail-desc">ادمین پنل شما بسیار زیباست!</span> <span class="time">9:02 AM</span> </div>
+                                        <span class="mail-desc">ادمین پنل شما بسیار زیباست!</span> <span class="time">لورم ایپسوم</span> </div>
                                 </a>
                             </div>
                         </li>
@@ -109,6 +108,7 @@
                         </li>
                         <li class="divider"> </li>
                         <li>
+
                             <a href="#">
                                 <div>
                                     <p> <strong>وظیفه 2</strong> <span class="pull-left text-muted">20% انجام شده</span> </p>
@@ -149,7 +149,7 @@
                 </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img src="assets/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">استیو جابز</b> </a>
+                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img src="themes/assets/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">استیو جابز</b> </a>
                     <ul class="dropdown-menu dropdown-user scale-up">
                         <li><a href="#"><i class="ti-user"></i> پروفایل من</a></li>
                         <li><a href="#"><i class="ti-wallet"></i> معاملات من</a></li>
@@ -186,9 +186,9 @@
                                 <li><a href="form-pickers.html">انتخاب‌گرهای فرم</a></li>
                                 <li><a href="icheck-control.html">کنترل های فرم iCheck</a></li>
                                 <li><a href="form-wizard.html">فرم مرحله‌ای</a></li>
-                                <li><a href="form-typeahead.html">Typeahead</a></li>
-                                <li><a href="form-xeditable.html">X-editable</a></li>
-                                <li><a href="form-summernote.html">Summernote</a></li>
+                                <li><a href="form-typeahead.html">لورم ایپسوم</a></li>
+                                <li><a href="form-xeditable.html">لورم ایپسوم</a></li>
+                                <li><a href="form-summernote.html">لورم ایپسوم</a></li>
                                 <li><a href="form-bootstrap-wysihtml5.html">ویرایشگر متن بوت استرپ</a></li>
                                 <li><a href="form-tinymce-wysihtml5.html">ویرایشگر متن Tinymce</a></li>
                             </ul>
@@ -235,9 +235,6 @@
                                 <div class="col-sm-2">
                                     <div class="white-box text-center bg-warning"><a href="#" target="_blank" class="text-white"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i><br>گزینه نمایشی 5</a></div>
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="white-box text-center bg-danger"><a href="#" target="_blank" class="text-white"><i class="linea-icon linea-ecommerce fa-fw" data-icon="d"></i><br>خرید قالب</a></div>
-                                </div>
                             </div>
                         </li>
                     </ul>
@@ -251,6 +248,11 @@
         <!-- /.navbar-top-links -->
         <!-- /.navbar-static-side -->
     </nav>
+    
+    
+    
+    
+
     <!-- End Top Navigation -->
     <!-- Left navbar-header -->
     <div class="navbar-default sidebar" role="navigation">
@@ -266,7 +268,7 @@
                     <!-- /input-group -->
                 </li>
                 <li class="user-pro">
-                    <a href="#" class="waves-effect"><img src="assets/images/users/varun.jpg" alt="user-img" class="img-circle"> <span class="hide-menu"> استیو جابز<span class="fa arrow"></span></span>
+                    <a href="#" class="waves-effect"><img src="<?= HTTP_HOST ?>/themes/assets/images/users/varun.jpg" alt="user-img" class="img-circle"> <span class="hide-menu"> استیو جابز<span class="fa arrow"></span></span>
                     </a>
                     <ul class="nav nav-second-level">
                         <li><a href="javascript:void(0)"><i class="ti-user"></i> پروفایل من</a></li>
@@ -462,69 +464,43 @@
         <div class="container-fluid">
             <div class="row bg-title">
                 <div class="col-lg-3 col-md-4 col-12">
-                    <h4 class="page-title">صفحه اعتبارسنجی فرم ها</h4>
+                    <h4 class="page-title">ثبت کالا</h4>
                 </div>
                 <div class="col-lg-9 col-md-8 col-12">
-                    <a href="#" target="_blank" class="btn btn-danger pull-left m-r-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">خرید قالب</a>
                     <ol class="breadcrumb">
                         <li><a href="#">داشبورد</a></li>
                         <li><a href="#">فرم ها</a></li>
-                        <li class="active">صفحه اعتبارسنجی فرم ها</li>
+                        <li class="active">ثبت کالا</li>
                     </ol>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- .row -->
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-6">
                     <div class="white-box">
-                        <h3 class="box-title m-b-0">اعتبارسنجی فرم</h3>
-                        <p class="text-muted m-b-30"> Bootstrap Form Validation</p>
-                        <form data-toggle="validator">
+                        <h3 class="box-title m-b-0">ثبت کالا</h3><br>
+                        <form data-toggle="validator" action="../actions/products.php">
                             <div class="form-group">
-                                <label for="inputName1" class="control-label">نام</label>
-                                <input type="text" class="form-control" id="inputName1" placeholder="Cina Saffary" required>
+                                <label for="inputName1" class="control-label">نام کالا</label>
+                                <input type="text" class="form-control" id="inputName1" placeholder="نام کالا را وارد کنید" required>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail" class="control-label">ایمیل</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-required-error="وارد کردن این قسمت الزامی است" data-error="ایمیل وارد شده نامعتبر است" required>
-                                <small class="help-block with-errors"></small>
+                                <label for="inputName1" class="control-label">توضیحات</label>
+                                <input type="text" class="form-control" id="inputName1" placeholder="توضیحات کالا را وارد کنید" required>
                             </div>
                             <div class="form-group">
-                                <label for="textarea" class="control-label">ورودی متن</label>
-                                <textarea id="textarea" class="form-control" data-required-error="وارد کردن این قسمت الزامی است" required></textarea>
-                                <small class="help-block with-errors">متن کمکی برای این فیلد!</small>
+                                <label for="inputName1" class="control-label">کلمات کلیدی</label>
+                                <input type="text" class="form-control" id="inputName1" placeholder="کلمات کلیدی کالا را وارد کنید" required>
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword" class="control-label">رمز عبور</label>
-                                <div class="row">
-                                    <div class="form-group col-sm-6">
-                                        <input type="password" data-toggle="validator" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" data-required-error="وارد کردن این قسمت الزامی است" data-minlength-error="وارد کردن حداقل 6 کاراکتر الزامی است" required>
-                                        <small class="help-block with-errors">حداقل 6 کاراکتر</small>
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                        <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="رمز عبور های وارد شده مطابقت ندارند" data-required-error="وارد کردن این قسمت الزامی است" placeholder="Confirm" required>
-                                        <small class="help-block with-errors"></small>
-                                    </div>
-                                </div>
+                                <label for="inputName1" class="control-label">دشته بندی</label>
+                                <select class="form-control">
+                                    <option></option>
+                                </select>
                             </div>
-                            <div class="form-group">
-                                <div class="radio">
-                                    <input type="radio" name="underwear" id="out" required>
-                                    <label for="out"> Boxers </label>
-                                </div>
-                                <div class="radio">
-                                    <input type="radio" name="underwear" id="in" required>
-                                    <label for="in"> Briefs </label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="terms" data-error="انتخاب این گزینه الزامی است!" required>
-                                    <label for="terms"> انتخاب کنید </label>
-                                </div>
-                                <small class="help-block with-errors"></small>
-                            </div>
+
+
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">ثبت</button>
                             </div>
@@ -533,88 +509,11 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="white-box">
-                        <h3 class="box-title m-b-0">اعتبارسنجی فرم</h3>
-                        <p class="text-muted m-b-30"> Bootstrap Form Validation</p>
-                        <form data-toggle="validator">
-                            <div class="form-group">
-                                <label for="inputName" class="control-label">نام</label>
-                                <input type="text" class="form-control" id="inputName" placeholder="Cina Saffary" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail2" class="control-label">ایمیل</label>
-                                <input type="email" class="form-control" id="inputEmail2" placeholder="Email" data-required-error="وارد کردن این قسمت الزامی است" data-error="ایمیل وارد شده نامعتبر است" required>
-                                <small class="help-block with-errors"></small>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPassword2" class="control-label">رمز عبور</label>
-                                <div class="row">
-                                    <div class="form-group col-sm-6 m-0">
-                                        <input type="password" data-toggle="validator" data-minlength="6" class="form-control" id="inputPassword2" placeholder="Password" data-required-error="وارد کردن این قسمت الزامی است" data-minlength-error="وارد کردن حداقل 6 کاراکتر الزامی است" required>
-                                        <small class="help-block with-errors">حداقل 6 کاراکتر</small>
-                                    </div>
-                                    <div class="form-group col-sm-6 m-0">
-                                        <input type="password" class="form-control" id="inputPasswordConfirm2" data-match="#inputPassword2" data-match-error="رمز عبور های وارد شده مطابقت ندارند" data-required-error="وارد کردن این قسمت الزامی است" placeholder="Confirm" required>
-                                        <small class="help-block with-errors"></small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="terms2" data-error="انتخاب این گزینه الزامی است!" required>
-                                    <label for="terms2"> به خاطر سپاری؟</label>
-                                </div>
-                                <small class="help-block with-errors"></small>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success">ثبت</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="white-box">
-                        <h3 class="box-title m-b-0">اعتبارسنجی فرم افقی</h3>
-                        <p class="text-muted m-b-30"> Bootstrap Form Validation </p>
-                        <form data-toggle="validator" class="form-horizontal">
-                            <div class="form-group row">
-                                <label for="inputName4" class="control-label col-sm-3">نام</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="inputName4" placeholder="Cina Saffary" data-required-error="وارد کردن این قسمت الزامی است" required>
-                                    <small class="help-block with-errors"></small>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputEmail4" class="control-label col-sm-3">ایمیل</label>
-                                <div class="col-sm-9">
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" data-required-error="وارد کردن این قسمت الزامی است" data-error="ایمیل وارد شده نامعتبر است" required>
-                                    <small class="help-block with-errors"></small>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputPassword4" class="control-label col-sm-3">رمز عبور</label>
-                                <div class="form-group col-sm-4 m-0">
-                                    <input type="password" data-toggle="validator" data-minlength="6" class="form-control" id="inputPassword4" placeholder="Password" data-required-error="وارد کردن این قسمت الزامی است" data-minlength-error="وارد کردن حداقل 6 کاراکتر الزامی است" required>
-                                    <small class="help-block with-errors">حداقل 6 کاراکتر</small>
-                                </div>
-                                <div class="form-group col-sm-4 m-0">
-                                    <input type="password" class="form-control" id="inputPasswordConfirm4" data-match="#inputPassword4" data-match-error="رمز عبور های وارد شده مطابقت ندارند" data-required-error="وارد کردن این قسمت الزامی است" placeholder="Confirm" required>
-                                    <small class="help-block with-errors"></small>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-sm-3"></label>
-                                <div class="col-sm-9">
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="terms4" data-error="انتخاب این گزینه الزامی است!" required>
-                                        <label for="terms4"> به خاطر سپاری؟</label>
-                                    </div>
-                                    <small class="help-block with-errors"></small>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-sm-3 col-sm-9">
-                                    <button type="submit" class="btn btn-info">ثبت</button>
-                                </div>
+                        <h3 class="box-title m-b-0">گالری تصاویر</h3>
+                        <p class="text-muted m-b-30">آپلود عکس چندگانه</p>
+                        <form action="#" class="dropzone">
+                            <div class="fallback">
+                                <input name="file" type="file" multiple>
                             </div>
                         </form>
                     </div>
@@ -668,28 +567,28 @@
                         <ul class="m-t-20 chatonline">
                             <li><b>اختیارات چت</b></li>
                             <li>
-                                <a href="javascript:void(0)"><img src="assets/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>سامان جلیلی <small class="text-success">online</small></span></a>
+                                <a href="javascript:void(0)"><img src="<?= HTTP_HOST ?>/themes/assets/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>سامان جلیلی <small class="text-success">online</small></span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)"><img src="assets/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>احسان خواجه امیری <small class="text-warning">Away</small></span></a>
+                                <a href="javascript:void(0)"><img src="<?= HTTP_HOST ?>/themes/assets/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>احسان خواجه امیری <small class="text-warning">Away</small></span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)"><img src="assets/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>حمید هیراد <small class="text-danger">Busy</small></span></a>
+                                <a href="javascript:void(0)"><img src="<?= HTTP_HOST ?>/themes/assets/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>حمید هیراد <small class="text-danger">Busy</small></span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)"><img src="assets/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>سپهر آریا <small class="text-muted">Offline</small></span></a>
+                                <a href="javascript:void(0)"><img src="<?= HTTP_HOST ?>/themes/assets/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>سپهر آریا <small class="text-muted">Offline</small></span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)"><img src="assets/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>امین رستمی <small class="text-success">online</small></span></a>
+                                <a href="javascript:void(0)"><img src="<?= HTTP_HOST ?>/themes/assets/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>امین رستمی <small class="text-success">online</small></span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)"><img src="assets/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>بهنام بانی<small class="text-success">online</small></span></a>
+                                <a href="javascript:void(0)"><img src="<?= HTTP_HOST ?>/themes/assets/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>بهنام بانی<small class="text-success">online</small></span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)"><img src="assets/images/users/john.jpg" alt="user-img" class="img-circle"> <span>مازیار فلاحی<small class="text-success">online</small></span></a>
+                                <a href="javascript:void(0)"><img src="<?= HTTP_HOST ?>/themes/assets/images/users/john.jpg" alt="user-img" class="img-circle"> <span>مازیار فلاحی<small class="text-success">online</small></span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)"><img src="assets/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>بنیامین بهادری <small class="text-success">online</small></span></a>
+                                <a href="javascript:void(0)"><img src="<?= HTTP_HOST ?>/themes/assets/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>بنیامین بهادری <small class="text-success">online</small></span></a>
                             </li>
                         </ul>
                     </div>
@@ -698,28 +597,57 @@
             <!-- /.right-sidebar -->
         </div>
         <!-- /.container-fluid -->
-        <footer class="footer text-center">ارائه شده در وب‌سایت <a href="https://www.rtl-theme.com" target="_blank">راست‌چین</a></footer>
     </div>
     <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->
 <!-- jQuery -->
-<script src="assets/plugins/jquery/dist/jquery.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="assets/plugins/bootstrap/dist/js/tether.min.js"></script>
-<script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
 <!-- Menu Plugin JavaScript -->
-<script src="assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
 <!--slimscroll JavaScript -->
-<script src="assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
 <!--Wave Effects -->
-<script src="assets/plugins/waves/waves.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/waves/waves.min.js"></script>
 <!-- Custom Theme JavaScript -->
-<script src="assets/js/custom.js"></script>
-<script src="assets/plugins/bootstrap-validator/bootstrap-validator.min.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/js/custom.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/plugins/bootstrap-validator/bootstrap-validator.min.js"></script>
 <!--Style Switcher -->
-<script src="assets/js/style-switcher.js"></script>
+<script src="<?= HTTP_HOST ?>/themes/assets/js/style-switcher.js"></script>
+<script src="<?=HTTP_HOST?>/themes/assets/plugins/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="<?=HTTP_HOST?>/themes/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
+<script src="<?=HTTP_HOST?>/themes/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<?=HTTP_HOST?>/themes/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+<!-- Menu Plugin JavaScript -->
+<script src="<?=HTTP_HOST?>/themes/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
+<!--slimscroll JavaScript -->
+<script src="<?=HTTP_HOST?>/themes/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+<!--Wave Effects -->
+<script src="<?=HTTP_HOST?>/themes/assets/plugins/waves/waves.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="<?=HTTP_HOST?>/themes/assets/js/custom.js"></script>
+<!-- Dropzone Plugin JavaScript -->
+<script src="<?=HTTP_HOST?>/themes/assets/plugins/dropzone-master/dist/dropzone.js"></script>
+<script>
+    $(document).ready(function() {
+
+        Dropzone.prototype.defaultOptions.dictDefaultMessage = "فایل ها را جهت آپلود به این قسمت بکشید";
+        Dropzone.prototype.defaultOptions.dictFallbackMessage = "مرورگر شما از آپلود فایل با کشیدن و رهاسازی پشتیبانی نمی کند";
+        Dropzone.prototype.defaultOptions.dictFileTooBig = "فایل خیلی بزرگ است ({{filesize}}MiB). حداکثر حجم فایل: {{maxFilesize}}MiB.";
+        Dropzone.prototype.defaultOptions.dictInvalidFileType = "امکان ارسال فایل های از این نوع وجود ندارد";
+        Dropzone.prototype.defaultOptions.dictResponseError = "سرور با کد {{statusCode}} پاسخ داد.";
+        Dropzone.prototype.defaultOptions.dictCancelUpload = "لغو ارسال";
+        Dropzone.prototype.defaultOptions.dictCancelUploadConfirmation = "آیا از لغو این ارسال اطمینان دارید؟";
+        Dropzone.prototype.defaultOptions.dictRemoveFile = "حذف فایل";
+        Dropzone.prototype.defaultOptions.dictMaxFilesExceeded = "امکان ارسال فایل بیشتر وجود ندارد.";
+
+    });
+</script>
 </body>
 
 </html>

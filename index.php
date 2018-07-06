@@ -13,6 +13,9 @@ if($linkOne == 'register' || $linkOne == 'login' || $_COOKIE['user_id'] == ''){
         case "register":
             require('forms/register.php');
             break;
+        case "add_product":
+            require('forms/add_product.php');
+            break;
         default:
             require('home.php');
     }
