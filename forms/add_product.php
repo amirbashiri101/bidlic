@@ -479,30 +479,51 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="white-box">
+                        <?php
+                        if(@$_COOKIE['notif'] != ''){
+                            $db->notif(json_decode(@$_COOKIE['notif'],true)['type'], json_decode(@$_COOKIE['notif'],true)['text']);
+                            $_COOKIE['notif'] = '';
+
+                        }
+                        ?>
                         <h3 class="box-title m-b-0">ثبت کالا</h3><br>
-                        <form data-toggle="validator" action="../actions/products.php">
+                        <form data-toggle="validator" method="post" action="actions/products.php">
                             <div class="form-group">
                                 <label for="inputName1" class="control-label">نام کالا</label>
-                                <input type="text" class="form-control" id="inputName1" placeholder="نام کالا را وارد کنید" required>
+                                <input type="text" class="form-control" id="inputName1" name="name" placeholder="نام کالا را وارد کنید" required>
                             </div>
                             <div class="form-group">
-                                <label for="inputName1" class="control-label">توضیحات</label>
-                                <input type="text" class="form-control" id="inputName1" placeholder="توضیحات کالا را وارد کنید" required>
+                                <label class="control-label">توضیحات</label>
+                                <input type="text" class="form-control" name="description" placeholder="توضیحات کالا را وارد کنید" >
                             </div>
                             <div class="form-group">
-                                <label for="inputName1" class="control-label">کلمات کلیدی</label>
-                                <input type="text" class="form-control" id="inputName1" placeholder="کلمات کلیدی کالا را وارد کنید" required>
+                                <label class="control-label">کلمات کلیدی</label>
+                                <input type="text" class="form-control" name="keys" placeholder="کلمات کلیدی کالا را وارد کنید" >
                             </div>
                             <div class="form-group">
-                                <label for="inputName1" class="control-label">دشته بندی</label>
-                                <select class="form-control">
-                                    <option></option>
-                                </select>
+                                <label class="control-label">دشته بندی</label>
+                                <div style="border: 1px solid #000; width: auto;">
+                                    <ul>
+                                        <?php
+                                            $category = $db->get('category',null);
+                                            foreach ($category as $c){
+                                                if ($c['parent_id'] == ''){
+                                        ?>
+                                        <li><input type="checkbox"> <?= $c['name'] ?>
+                                            <?php } if ($c['parent_id'] !== ''){ ?>
+                                                 <ul>
+                                                     <li><input type="checkbox"><?= $c['name'] ?></li>
+                                                 </ul>
+                                            <?php } ?>
+                                        </li>
+                                        <?php }  ?>
+                                    </ul>
+                                </div>
                             </div>
 
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">ثبت</button>
+                                <button type="submit" class="btn btn-primary" name="sub">ثبت</button>
                             </div>
                         </form>
                     </div>
