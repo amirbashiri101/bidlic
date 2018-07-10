@@ -4,12 +4,6 @@
 <head>
     <?php
     $category = $db->get('category',null);
-    if (@$_GET['cvid'] !== ''){
-        $ncvid = $db->where('id',@$_GET['cvid'])->getOne('category','name');
-        $dcvid = $db->where('id',@$_GET['cvid'])->getOne('category','description');
-        $pcvid = $db->where('id',@$_GET['cvid'])->getOne('category','parent_id');
-        $select_parent = $db->where('id',$pcvid['parent_id'])->getOne('category','name');
-    }
     ?>
 
     <meta charset="utf-8">
@@ -39,7 +33,6 @@
     <link href="<?= HTTP_HOST ?>/themes/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
     <link href="<?= HTTP_HOST ?>/themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
     <link href="<?= HTTP_HOST ?>/themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
 </head>
 
 <body class="fix-header fix-sidebar">
@@ -481,7 +474,7 @@
                 <div class="col-lg-9 col-md-8 col-12">
                     <ol class="breadcrumb">
                         <li><a href="#">داشبورد</a></li>
-                        <li><a href="#">فرم ها</a></li>
+                        <li><a href="#">لیست ها</a></li>
                         <li class="active">دسته بندی</li>
                     </ol>
                 </div>
@@ -499,48 +492,46 @@
                         }
                         ?>
                         <h3 class="box-title m-b-0">دسته بندی</h3><br>
-                        <form data-toggle="validator" method="post" action="actions/save_category.php" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <input type="hidden" name="cvid" value="<?= @$_GET['cvid'] ?>" placeholder="نام دسته را وارد کنید" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputName1" class="control-label">نام دسته</label>
-                                <input type="text" class="form-control" id="inputName1" name="cate_name" value="<?= $ncvid['name'] ?>" placeholder="نام دسته را وارد کنید" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">مادر دسته<?php
-                                    if (@$_GET['cvid'] !== ''){
-                                        if ($pcvid['parent_id'] == ''){
-                                            $not = "(ندارد)";
-                                        }
-                                        echo '('.$select_parent['name'].$not.')';
-                                    }
-                                    ?>
-                                </label>
-                                <select class="form-control" name="parent">
-                                    <option></option>
-                                    <?php
-
-                                    foreach ($category as $c){ ?>
-                                        <option value="<?= $c['id'];?>"><?= $c['name']; ?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">توضیحات</label>
-                                <input type="text" class="form-control" name="discription" value="<?= $dcvid['description'] ?>" placeholder="توضیحات دسته را وارد کنید" >
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">آپلود عکس</label>
-                                <input type="file" class="form-control" name="upload" value="برای آپلود عکس کلیک کنید" >
-                            </div>
+                        <div class="col-sm-12">
+                            <div class="white-box">
+                                <h3 class="box-title m-b-0">دسته ها</h3>
+                                <div style="border: 1px solid #000;width: auto;">
 
 
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary" name="sub">ثبت</button>
+                                    <div class="table-responsive">
+                                        <table class="table color-table info-table">
+                                            <thead>
+                                            <tr>
+                                                <th>نام</th>
+                                                <th>مادر دسته</th>
+                                                <th>توضیحات</th>
+                                                <th>عملیات</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php foreach ($category as $c){
+                                                $parent = $c['parent_id'];
+                                                $select_parent = $db->where('id',$parent)->getOne('category','name');
+                                                ?>
+                                                <tr>
+                                                    <td><?= $c['name'] ?></td>
+                                                    <td><?= $select_parent['name'] ?></td>
+                                                    <td><?= $c['description'] ?></td>
+                                                    <td>
+                                                        <a href="index.php?linkOne=category&cvid=<?= $c['id'] ?>">
+                                                            <button class="fcbtn btn btn-info btn-outline btn-1c waves-effect">ویرایش</button>
+                                                        </a>
+                                                            <button class="fcbtn btn btn-danger btn-outline btn-1c waves-effect" onclick="if(confirm('آیا از حذف این مدیر اطمینان دارید ؟')){ window.location.assign('actions/save_category.php?hvid=<?= $c['id'] ?>') }">حذف</button>
+
+                                                    </td>
+                                                </tr>
+                                            <?php } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                        </form>
-                    </div>
+                        </div>                    </div>
                 </div>
 
             </div>
@@ -658,8 +649,38 @@
 <script src="<?=HTTP_HOST?>/themes/assets/js/custom.js"></script>
 <!-- Dropzone Plugin JavaScript -->
 <script src="<?=HTTP_HOST?>/themes/assets/plugins/dropzone-master/dist/dropzone.js"></script>
+<script>
+    $(document).ready(function() {
 
+        Dropzone.prototype.defaultOptions.dictDefaultMessage = "فایل ها را جهت آپلود به این قسمت بکشید";
+        Dropzone.prototype.defaultOptions.dictFallbackMessage = "مرورگر شما از آپلود فایل با کشیدن و رهاسازی پشتیبانی نمی کند";
+        Dropzone.prototype.defaultOptions.dictFileTooBig = "فایل خیلی بزرگ است ({{filesize}}MiB). حداکثر حجم فایل: {{maxFilesize}}MiB.";
+        Dropzone.prototype.defaultOptions.dictInvalidFileType = "امکان ارسال فایل های از این نوع وجود ندارد";
+        Dropzone.prototype.defaultOptions.dictResponseError = "سرور با کد {{statusCode}} پاسخ داد.";
+        Dropzone.prototype.defaultOptions.dictCancelUpload = "لغو ارسال";
+        Dropzone.prototype.defaultOptions.dictCancelUploadConfirmation = "آیا از لغو این ارسال اطمینان دارید؟";
+        Dropzone.prototype.defaultOptions.dictRemoveFile = "حذف فایل";
+        Dropzone.prototype.defaultOptions.dictMaxFilesExceeded = "امکان ارسال فایل بیشتر وجود ندارد.";
+
+    });
+</script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

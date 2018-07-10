@@ -16,6 +16,9 @@ if($linkOne == 'register' || $linkOne == 'login' || $_COOKIE['user_id'] == ''){
         case "add_product":
             require('forms/add_product.php');
             break;
+        case "list_category":
+            require('lists/category.php');
+            break;
         case "category":
             require('forms/category.php');
             break;
