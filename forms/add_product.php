@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="fa">
 
@@ -460,9 +459,7 @@
         </div>
     </div>
     <!-- Left navbar-header end -->
-    <!-- Page Content -->
-=======
->>>>>>> 870500370e12e40e5978939b7dd984e561aa04e8
+
     <div id="page-wrapper">
         <div class="container-fluid">
             <div class="row bg-title">
@@ -622,7 +619,7 @@
         </div>
         <!-- /.container-fluid -->
     </div>
-<<<<<<< HEAD
+
     <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->
@@ -676,6 +673,4 @@
 </body>
 
 </html>
-=======
-    <!-- /#page-wrapper -->
->>>>>>> 870500370e12e40e5978939b7dd984e561aa04e8
+
