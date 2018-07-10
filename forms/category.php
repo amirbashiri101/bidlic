@@ -2,6 +2,10 @@
 <html lang="fa">
 
 <head>
+    <?php
+    $category = $db->get('category',null);
+    ?>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +34,7 @@
     <link href="<?= HTTP_HOST ?>/themes/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
     <link href="<?= HTTP_HOST ?>/themes/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 </head>
+
 <body class="fix-header fix-sidebar">
 <div class="preloader">
     <svg class="circular" viewbox="25 25 50 50">
@@ -248,10 +253,10 @@
         <!-- /.navbar-top-links -->
         <!-- /.navbar-static-side -->
     </nav>
-    
-    
-    
-    
+
+
+
+
 
     <!-- End Top Navigation -->
     <!-- Left navbar-header -->
@@ -459,18 +464,18 @@
         </div>
     </div>
     <!-- Left navbar-header end -->
-
+    <!-- Page Content -->
     <div id="page-wrapper">
         <div class="container-fluid">
             <div class="row bg-title">
                 <div class="col-lg-3 col-md-4 col-12">
-                    <h4 class="page-title">ثبت کالا</h4>
+                    <h4 class="page-title">دسته بندی</h4>
                 </div>
                 <div class="col-lg-9 col-md-8 col-12">
                     <ol class="breadcrumb">
                         <li><a href="#">داشبورد</a></li>
                         <li><a href="#">فرم ها</a></li>
-                        <li class="active">ثبت کالا</li>
+                        <li class="active">دسته بندی</li>
                     </ol>
                 </div>
                 <!-- /.col-lg-12 -->
@@ -486,39 +491,26 @@
 
                         }
                         ?>
-                        <h3 class="box-title m-b-0">ثبت کالا</h3><br>
-                        <form data-toggle="validator" method="post" action="actions/products.php">
+                        <h3 class="box-title m-b-0">دسته بندی</h3><br>
+                        <form data-toggle="validator" method="post" action="actions/save_category.php">
                             <div class="form-group">
-                                <label for="inputName1" class="control-label">نام کالا</label>
-                                <input type="text" class="form-control" id="inputName1" name="name" placeholder="نام کالا را وارد کنید" required>
+                                <label for="inputName1" class="control-label">نام دسته</label>
+                                <input type="text" class="form-control" id="inputName1" name="cate_name" placeholder="نام دسته را وارد کنید" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">مادر دسته</label>
+                                <select class="form-control" name="parent">
+                                    <option></option>
+                                    <?php
+
+                                    foreach ($category as $c){ ?>
+                                        <option value="<?= $c['id'] ?>"><?= $c['name'] ?></option>
+                                    <?php } ?>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">توضیحات</label>
-                                <input type="text" class="form-control" name="description" placeholder="توضیحات کالا را وارد کنید" >
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">کلمات کلیدی</label>
-                                <input type="text" class="form-control" name="keys" placeholder="کلمات کلیدی کالا را وارد کنید" >
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">دشته بندی</label>
-                                <div style="border: 1px solid #000; width: auto;">
-                                    <ul>
-                                        <?php
-                                            $category = $db->get('category',null);
-                                            foreach ($category as $c){
-                                                if ($c['parent_id'] == ''){
-                                        ?>
-                                        <li><input type="checkbox"> <?= $c['name'] ?>
-                                            <?php } if ($c['parent_id'] !== ''){ ?>
-                                                 <ul>
-                                                     <li><input type="checkbox"><?= $c['name'] ?></li>
-                                                 </ul>
-                                            <?php } ?>
-                                        </li>
-                                        <?php }  ?>
-                                    </ul>
-                                </div>
+                                <input type="text" class="form-control" name="discription" placeholder="توضیحات دسته را وارد کنید" >
                             </div>
 
 
@@ -530,13 +522,36 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="white-box">
-                        <h3 class="box-title m-b-0">گالری تصاویر</h3>
-                        <p class="text-muted m-b-30">آپلود عکس چندگانه</p>
-                        <form action="#" class="dropzone">
-                            <div class="fallback">
-                                <input name="file" type="file" multiple>
+                        <h3 class="box-title m-b-0">دسته ها</h3>
+                        <div style="border: 1px solid #000;width: auto;">
+
+
+                            <div class="table-responsive">
+                                <table class="table color-table info-table">
+                                    <thead>
+                                    <tr>
+                                        <th>نام</th>
+                                        <th>مادر دسته</th>
+                                        <th>توضیحات</th>
+                                        <th>عملیات</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php foreach ($category as $c){
+                                        $parent = $c['parent_id'];
+                                        $select_parent = $db->where('id',$parent)->getOne('category','name');
+                                        ?>
+                                    <tr>
+                                        <td><?= $c['name'] ?></td>
+                                        <td><?= $select_parent['name'] ?></td>
+                                        <td><?= $c['description'] ?></td>
+                                        <td><input type="checkbox"> </td>
+                                    </tr>
+                                    <?php } ?>
+                                    </tbody>
+                                </table>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -619,7 +634,6 @@
         </div>
         <!-- /.container-fluid -->
     </div>
-
     <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->
