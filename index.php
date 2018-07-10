@@ -22,7 +22,9 @@ if($linkOne == 'register' || $linkOne == 'login' || $_COOKIE['user_id'] == ''){
     require('sidebar.php');
     echo $_COOKIE['user_id'];
     switch ($linkOne) {
-
+        case"add_product":
+            require('forms/add_product.php');
+            break;
         default:
             require('home.php');
     }
