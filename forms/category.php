@@ -510,10 +510,10 @@
                             <div class="form-group">
                                 <label class="control-label">مادر دسته<?php
                                     if (@$_GET['cvid'] !== ''){
-                                        if ($pcvid['parent_id'] == ''){
+                                        if ($pcvid['parent_id'] == '') {
                                             $not = "(ندارد)";
+                                            echo '(' . $select_parent['name'] . $not . ')';
                                         }
-                                        echo '('.$select_parent['name'].$not.')';
                                     }
                                     ?>
                                 </label>

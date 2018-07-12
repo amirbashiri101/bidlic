@@ -502,6 +502,7 @@
                                         <table class="table color-table info-table">
                                             <thead>
                                             <tr>
+                                                <th>عکس</th>
                                                 <th>نام</th>
                                                 <th>مادر دسته</th>
                                                 <th>توضیحات</th>
@@ -514,6 +515,7 @@
                                                 $select_parent = $db->where('id',$parent)->getOne('category','name');
                                                 ?>
                                                 <tr>
+                                                    <td><img alt="" class="media-object" src="uploads/category/<?= $c['image'] ?>" data-holder-rendered="true" style="width: 64px; height: 64px;"></td>
                                                     <td><?= $c['name'] ?></td>
                                                     <td><?= $select_parent['name'] ?></td>
                                                     <td><?= $c['description'] ?></td>
