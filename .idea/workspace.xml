@@ -160,6 +160,15 @@
     <packageJsonPaths />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-16" />
+    <option name="y" value="-16" />
+    <option name="width" value="3872" />
+    <option name="height" value="2092" />
+=======
+>>>>>>> d7600adc84725ee9c1255a7e8660a2bb92f34b85
   <component name="PhpServers">
     <servers />
   </component>
@@ -170,6 +179,7 @@
     <option name="y" value="20" />
     <option name="width" value="1004" />
     <option name="height" value="688" />
+>>>>>>> ee29e848ca881d7e77883da04aeb13ad6cc6d6bb
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
